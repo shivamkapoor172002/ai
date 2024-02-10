@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Task Outputs</h1>
+    </header>
+    <div class="container">
+        <section class="task-output">
+            <h2>Task 1 Output</h2>
+            <div class="output">
+                <p>Data point belongs to Cluster: 1</p>
+                <p>Distance to Cluster Centroid: 35.25136940229334</p>
+                <img src="{{ plot_path }}" alt="KMeans Clustering Plot">
+            </div>
+        </section>
+        
+        <section class="task-output">
+            <h2>Task 2 Output</h2>
+            <div class="output">
+                <p>Reason for choosing Random Forest algorithm:</p>
+                <p>Random Forest is robust, versatile, and adept at handling complex datasets. Its ensemble nature mitigates overfitting, while its ability to capture nonlinear relationships and feature importance aids in model interpretability. This makes it a top choice for reliable classification tasks.</p>
+                <p>Train Accuracy: {{ train_accuracy }}</p>
+            </div>
+        </section>
+
+        <section class="task-output">
+            <h2>Task 3 Output</h2>
+            <div class="output">
+                <p>Output Excel file: <a href="{{ output_path }}" download>Download</a></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
